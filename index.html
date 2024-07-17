@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="contenido__logo">
+            <img src="assets/Logo.png" alt="logo-alura">
+        </div>
+        <div class="contenido__encriptar">
+            <textarea name="text" class="contenido__textarea" id="text" cols="30" rows="10"
+                placeholder="Ingresa tú texto aquí."></textarea>
+            <div class="contenido__validacion">
+                <p>Solo se aceptarán minúsculas y sin caracteres especiales.</p>
+            </div>
+            <div class="contenido__botones">
+                <button class="contenido__botones__encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <input type="button" class="contenido__botones__desencriptar" value="Desencriptar"
+                    onclick="desencriptar()" />
+                <button class="contenido__botones__desencriptar" type="button"
+                    onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="encriptado">
+            <img src="" alt="" id="muneco">
+            <div class="encriptado__mensaje" id="mensaje__encriptado">
+                <h2 id="encriptado__titulo__mensaje">Ningún mensaje fue encontrado.</h2>
+                <p id="encriptado__parrafo">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <textarea name="encriptado__mensaje__textarea" id="encriptado__mensaje__textarea" cols="30" rows="10"
+                    class="encriptado__mensaje__textarea"></textarea>
+            </div>
+            <div class="encriptado__botones">
+                <button class="encriptado__botones__copiar" type="button" onclick="copiar()">Copiar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
