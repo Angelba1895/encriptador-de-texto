@@ -16,7 +16,7 @@ let sustituir = [
     ["u", "ufat"],
 ]
 
-const remplace = (newValue) =>{
+const cambiar = (newValue) =>{
 
     mensaje__final.innerHTML = newValue;
     munheco.classList.add('oculto');
@@ -54,7 +54,7 @@ boton__encriptar.addEventListener("click", () => {
         reset();
     }
 
-    remplace(encriptar(text));
+    cambiar(encriptar(text));
     
 });
 
@@ -70,8 +70,8 @@ boton__desencriptar.addEventListener("click", () => {
     }}else{
         alert("Error!"+" Por favor ingrese un texto para desencriptar");
         reset();
-    }
-    remplace(desencriptar(text))
+    }   
+    cambiar(desencriptar(text))
 });
 
 boton__copiar.addEventListener("click",() => {
