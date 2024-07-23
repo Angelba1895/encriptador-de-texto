@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de texto</title>
+    <title>Encriptador</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="contenido">
-        <div class="contenido__logo">
-            <img src="assets/Logo.png" alt="logo-alura">
+    <header>
+        <div class="header">
+            <img class="header__logo" src="./assets/alura.svg" alt="">
         </div>
-        <div class="contenido__encriptar">
-            <textarea name="text" class="contenido__textarea" id="text" cols="30" rows="10"
-                placeholder="Ingresa tú texto aquí."></textarea>
-            <div class="contenido__validacion">
-                <p>Solo se aceptarán minúsculas y sin caracteres especiales.</p>
+    </header>
+    <main>
+        <div class="main">
+            <div class="izquierda">
+                <textarea id="ingreso__texto" class="ingreso__texto" placeholder="Ingrese texto aquí"></textarea>
+                <div class="izquierda__footer">
+                    <img src="./assets/exclamacion.svg" alt="">
+                    <span class="izquierda__info">Solo letras minúsculas y sin acentos</span>
+                    <div class="izquierda__botones">
+                        <button id="boton__encriptar" class="boton__encriptar">Encriptar</button>
+                        <button id="boton__desencriptar" class="boton__desencriptar">Desencriptar</button>
+                    </div>
+                </div>
             </div>
-            <div class="contenido__botones">
-                <button class="contenido__botones__encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                <input type="button" class="contenido__botones__desencriptar" value="Desencriptar"
-                    onclick="desencriptar()" />
-                <button class="contenido__botones__desencriptar" type="button"
-                    onclick="desencriptar()">Desencriptar</button>
-            </div>
-        </div>
-        <div class="encriptado">
-            <img src="" alt="" id="muneco">
-            <div class="encriptado__mensaje" id="mensaje__encriptado">
-                <h2 id="encriptado__titulo__mensaje">Ningún mensaje fue encontrado.</h2>
-                <p id="encriptado__parrafo">Ingresa el texto que deseas encriptar o desencriptar.</p>
-                <textarea name="encriptado__mensaje__textarea" id="encriptado__mensaje__textarea" cols="30" rows="10"
-                    class="encriptado__mensaje__textarea"></textarea>
-            </div>
-            <div class="encriptado__botones">
-                <button class="encriptado__botones__copiar" type="button" onclick="copiar()">Copiar</button>
+            <div id="derecha" class="derecha">
+                <img id="munheco" class="munheco" src="./assets/munheco.svg" alt="">
+                <!-- <div class=""></div> -->
+                <textarea id="mensaje__final" class="mensaje__final" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p id="derecha__info" class="derecha__info">Ingrese el mensaje que desees encriptar o desencriptar</p>
+                <button id="boton__copiar" class="boton__copiar oculto">Copiar</button>
             </div>
         </div>
-    </div>
+        <!-- <footer>
+        </footer> -->
+    </main>
+    <script src="./js/index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>
