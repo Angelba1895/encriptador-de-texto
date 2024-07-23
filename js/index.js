@@ -77,7 +77,6 @@ boton__desencriptar.addEventListener("click", () => {
 boton__copiar.addEventListener("click",() => {
 
     let text = mensaje__final;
-    //navigator.clipboard.writeText(text.value);
     text.select();
     document.execCommand("copy");
     alert("Texto copiado al portapapeles");
