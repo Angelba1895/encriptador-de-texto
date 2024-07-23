@@ -153,6 +153,20 @@ textarea {
     color: var(--color-blue);
 }
 
+footer {
+	width: 100%;
+	min-height: 56px;
+	height: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.enlaces{
+	width: 30px;
+}
+
 @media screen and (max-width: 800px) {
     .main {
         grid-template-columns: 1fr;
